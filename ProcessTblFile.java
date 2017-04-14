@@ -25,18 +25,17 @@ public class ProcessTblFile {
 
 
 	public static void main(String[] args) throws Exception{  
-        // TODO 自动生成的方法存根  
-        List<String> fileName = new ArrayList<>(Arrays.asList("customer.tbl","lineitem.tbl","nation.tbl","orders.tbl","part.tbl","partsupp.tbl","region.tbl","supplier.tbl"));
-        String inputFilenamePrefix = "/Users/biliyuan/Documents/workspace/Postgre/files/";  
-        String outputFilenamePrefix = "/Users/biliyuan/Documents/workspace/Postgre/files/output/"; 
+       
+        	List<String> fileName = new ArrayList<>(Arrays.asList("customer.tbl","lineitem.tbl","nation.tbl","orders.tbl","part.tbl","partsupp.tbl","region.tbl","supplier.tbl"));
+        	String inputFilenamePrefix = "/Users/biliyuan/Documents/workspace/Postgre/files/";  
+        	String outputFilenamePrefix = "/Users/biliyuan/Documents/workspace/Postgre/files/output/"; 
         
-        for(int i=0;i<fileName.size();i++){
-        	
-            System.setIn(new FileInputStream(inputFilenamePrefix + fileName.get(i)));  
-            System.setOut(new PrintStream(new FileOutputStream(outputFilenamePrefix + fileName.get(i))));  
-            Scanner in = new Scanner(System.in);  
-            ProcessTblFile ex = new ProcessTblFile(in);  
-            in.close();
-        } 
-    }  
+        	for(int i=0;i<fileName.size();i++){	
+            		System.setIn(new FileInputStream(inputFilenamePrefix + fileName.get(i)));  
+            		System.setOut(new PrintStream(new FileOutputStream(outputFilenamePrefix + fileName.get(i))));  
+            		Scanner in = new Scanner(System.in);  
+            		ProcessTblFile ex = new ProcessTblFile(in);  
+            		in.close();
+        	} 
+    	}  
 }
